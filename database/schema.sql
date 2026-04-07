@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS states CASCADE;
 -- ============================================================
 -- Reference / Lookup Tables
 -- ============================================================
-
+--Author- Prajwal
 CREATE TABLE states (
     state_code   CHAR(2)      PRIMARY KEY,
     state_abbrev CHAR(2)      UNIQUE NOT NULL,
