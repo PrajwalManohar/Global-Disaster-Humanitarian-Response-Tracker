@@ -2,6 +2,7 @@
 -- Global Disaster & Humanitarian Response Tracker
 -- Database Schema - PostgreSQL (Supabase)
 -- ============================================================
+--Author- Prajwal
 
 -- Drop tables in reverse dependency order (for re-runs)
 DROP TABLE IF EXISTS user_reports CASCADE;
@@ -37,6 +38,7 @@ CREATE TABLE incident_types (
 -- ============================================================
 -- Core Data Tables
 -- ============================================================
+--Author- Tanmay
 
 CREATE TABLE disasters (
     disaster_number    INTEGER      PRIMARY KEY,
@@ -69,6 +71,7 @@ CREATE TABLE disaster_areas (
 -- ============================================================
 -- Application Tables
 -- ============================================================
+--Author- Aditya
 
 CREATE TABLE users (
     user_id       SERIAL        PRIMARY KEY,
@@ -94,6 +97,7 @@ CREATE TABLE user_reports (
 -- ============================================================
 -- Indexes for Performance
 -- ============================================================
+--Author- Aditya
 
 CREATE INDEX idx_disasters_declaration_date ON disasters(declaration_date);
 CREATE INDEX idx_disasters_declaration_type ON disasters(declaration_type);
@@ -108,6 +112,7 @@ CREATE INDEX idx_user_reports_status        ON user_reports(status);
 -- ============================================================
 -- Seed Declaration Types
 -- ============================================================
+--Author- tanmay
 
 INSERT INTO declaration_types (type_code, type_name, description) VALUES
 ('DR', 'Major Disaster', 'A Major Disaster Declaration provides a wide range of federal assistance programs for individuals and public infrastructure.'),
@@ -117,6 +122,7 @@ INSERT INTO declaration_types (type_code, type_name, description) VALUES
 -- ============================================================
 -- Trigger: auto-update updated_at
 -- ============================================================
+--Author- Tanmay
 
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
