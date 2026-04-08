@@ -1,6 +1,6 @@
 -- U.S. States and Territories seed data
 -- state_code = FIPS code, state_abbrev = postal abbreviation
-
+-- Author: Aditya
 INSERT INTO states (state_code, state_abbrev, state_name) VALUES
 ('01', 'AL', 'Alabama'),
 ('02', 'AK', 'Alaska'),
