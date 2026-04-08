@@ -1,3 +1,4 @@
+//Author - Aditya
 export default function StatCard({ icon: Icon, label, value, color = "indigo" }) {
   const colors = {
     indigo: "bg-indigo-50 text-indigo-600",
